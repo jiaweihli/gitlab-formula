@@ -1,5 +1,3 @@
-#{% if grains['os_family']=="Debian" %}
-
 include:
   - vim
   - gitlab.packages
