@@ -4,3 +4,4 @@ include:
   - gitlab.user
   - gitlab.gitlab-shell
   - gitlab.gitlab
+  - gitlab.gems
