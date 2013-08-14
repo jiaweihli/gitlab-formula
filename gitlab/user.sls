@@ -3,3 +3,4 @@ git:
   user.present:
     - fullname: Gitlab
     - home: /home/git
+    - createhome: True
