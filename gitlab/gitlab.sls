@@ -10,7 +10,6 @@ https://github.com/gitlabhq/gitlabhq.git:
       
 /home/git/gitlab/config/gitlab.yml:
   file.copy
-    - name: /home/git/gitlab/config/gitlab.yml
     - source: /home/git/gitlab/config/gitlab.yml.example
     - require:
       - git.latest: https://github.com/gitlabhq/gitlabhq.git

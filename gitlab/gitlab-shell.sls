@@ -11,7 +11,6 @@ https://github.com/gitlabhq/gitlab-shell.git:
 
 /home/git/gitlab-shell/config.yml:
   file.copy
-    - name: /home/git/gitlab-shell/config.yml
     - source: /home/git/gitlab-shell/config.yml.example
     - require:
       - git.latest: https://github.com/gitlabhq/gitlab-shell.git
