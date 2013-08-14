@@ -1,4 +1,6 @@
 # download gitlab-shell and install
+include:
+  - gitlab.user
 
 https://github.com/gitlabhq/gitlab-shell.git:
   git.latest:
@@ -8,6 +10,7 @@ https://github.com/gitlabhq/gitlab-shell.git:
     - unless: test -e /home/git/gitlab-shell/config.yml
     - require:
       - pkg: pkgs
+      - user: git
 
 /home/git/gitlab-shell/config.yml:
   file.copy:

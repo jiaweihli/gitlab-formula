@@ -1,4 +1,7 @@
 # download gitlab and install
+include:
+  - gitlab.user
+
 https://github.com/gitlabhq/gitlabhq.git:
   git.latest:
     - rev: 5-4-stable
@@ -7,6 +10,7 @@ https://github.com/gitlabhq/gitlabhq.git:
     - unless: test -e /home/git/gitlab/config/gitlab.yml
     - require:
       - pkg: pkgs
+      - user: git
       
 /home/git/gitlab/config/gitlab.yml:
   file.copy:
