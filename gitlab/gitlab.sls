@@ -9,8 +9,8 @@ https://github.com/gitlabhq/gitlabhq.git:
       - pkg: pkgs
       
 /home/git/gitlab/config/gitlab.yml:
-  file.copy
-    - source: /home/git/gitlab/config/gitlab.yml.example
+  file.managed
+    - source: salt://gitlab/gitlab.yml
     - require:
       - git.latest: https://github.com/gitlabhq/gitlabhq.git
 
