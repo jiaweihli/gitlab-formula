@@ -1,6 +1,6 @@
+{% if grains['os'] == 'Ubuntu' %}
 gitlab:
   pkg.installed:
-  {% if grains['os'] == 'Ubuntu' %}
     - pkgs:
       - build-essential
       - zlib1g-dev 
@@ -20,7 +20,9 @@ gitlab:
       - libicu-dev
       - python2.7
       - ruby
-  {% elif grains['os'] == 'Arch' %}
+{% elif grains['os'] == 'Arch' %}
+gitlab:
+  pkg.installed:
     - pkgs:
       - sudo
       - base-devel
@@ -40,4 +42,4 @@ gitlab:
       - icu
       - python2
       - ruby
-  {% endif %}
+{% endif %}
