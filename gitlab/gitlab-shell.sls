@@ -17,7 +17,7 @@ https://github.com/gitlabhq/gitlab-shell.git:
       - git.latest: https://github.com/gitlabhq/gitlab-shell.git
 
 gitlab-shell-install:
-  cmd.run
+  cmd.run:
     - name: /home/git/gitlab-shell/bin/install
     - cwd: /home/git/gitlab-shell/bin/
     - runas: git

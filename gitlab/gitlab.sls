@@ -22,7 +22,7 @@ https://github.com/gitlabhq/gitlabhq.git:
     - require:
       - git.latest: https://github.com/gitlabhq/gitlabhq.git
 
-/home/git/gitlab/log/
+/home/git/gitlab/log:
   file.directory:
     - user: git
     - file_mode: 744
@@ -34,7 +34,7 @@ https://github.com/gitlabhq/gitlabhq.git:
     - require:
       - file: /home/git/gitlab/config/gitlab.yml
       
-/home/git/gitlab/tmp/
+/home/git/gitlab/tmp:
   file.directory:
     - user: git
     - file_mode: 744
