@@ -9,13 +9,14 @@ https://github.com/gitlabhq/gitlabhq.git:
       - pkg: pkgs
       
 /home/git/gitlab/config/gitlab.yml:
-  file.managed:
+  file.copy:
+    - name: /home/git/gitlab/config/gitlab.yml
     - source: salt://gitlab/gitlab.yml
     - require:
       - git.latest: https://github.com/gitlabhq/gitlabhq.git
 
 /home/git/gitlab/config/puma.rb:
-  file.copy
+  file.copy:
     - name: /home/git/gitlab/config/puma.rb
     - source: /home/git/gitlab/config/puma.rb.example
     - require:

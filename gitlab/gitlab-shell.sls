@@ -10,7 +10,8 @@ https://github.com/gitlabhq/gitlab-shell.git:
       - pkg: pkgs
 
 /home/git/gitlab-shell/config.yml:
-  file.managed:
+  file.copy:
+    - name: /home/git/gitlab-shell/config.yml
     - source: salt://gitlab/config.yml
     - require:
       - git.latest: https://github.com/gitlabhq/gitlab-shell.git
