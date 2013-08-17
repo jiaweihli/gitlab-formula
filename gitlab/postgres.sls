@@ -26,9 +26,8 @@ install_gitlab_postgresql:
     - cwd: /home/git/
     - runas: git        
     - require:
-        - gem: 
-          - bundler
-          - charlock_holmes
+        - gem: bundler
+        - gem: charlock_holmes
         - file: /home/git/gitlab/config/database.yml
         - service: postgresqld
 
