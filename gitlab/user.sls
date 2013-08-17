@@ -20,6 +20,7 @@ git_config_name:
     - runas: git
     - require:
       - user: git
+      - file: /home/git      
     
 git_config_email:
   cmd.run:
@@ -28,3 +29,4 @@ git_config_email:
     - runas: git
     - require:
       - user: git
+      - file: /home/git      
