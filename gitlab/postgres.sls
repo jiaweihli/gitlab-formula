@@ -1,3 +1,15 @@
+include: 
+  - gitlab.gems
+  - gitlab.gitlab
+  - postgresql
+  
+gitlab_database:
+  service:
+    - running
+    - enable: True
+    - names:
+      - postgresqld
+
 /home/git/gitlab/config/database.yml:
   file.copy:
     - name: /home/git/gitlab/config/database.yml
@@ -16,6 +28,7 @@ install_gitlab_postgresql:
     - require:
         - gem: bundler
         - file: /home/git/gitlab/config/database.yml
+        - service: postgresqld
 
 create_gitlab_database:
   cmd.wait:

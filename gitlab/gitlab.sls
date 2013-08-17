@@ -1,6 +1,7 @@
 # download gitlab and install
 include:
   - gitlab.user
+  - gitlab.packages
 
 https://github.com/gitlabhq/gitlabhq.git:
   git.latest:
