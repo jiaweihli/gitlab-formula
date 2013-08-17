@@ -10,7 +10,7 @@ gitlab_database:
   service:
     - running
     - enable: True
-    - name: postgresqld
+    - name: postgresql
 
 /home/git/gitlab/config/database.yml:
   file.copy:
@@ -31,7 +31,7 @@ install_gitlab_postgresql:
         - gem: bundler
         - gem: charlock_holmes
         - file: /home/git/gitlab/config/database.yml
-        - service: postgresqld
+        - service: postgresql
 
 create_gitlab_database:
   cmd.wait:
