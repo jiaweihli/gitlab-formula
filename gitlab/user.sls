@@ -4,6 +4,13 @@ git:
     - fullname: Gitlab
     - home: /home/git
     - createhome: True
+    
+/home/git:
+  file.directory:
+    - user: git
+    - mode: 755
+    - makedirs: True
+ 
 
 git_config_name:
   cmd.run:

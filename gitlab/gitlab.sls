@@ -12,6 +12,7 @@ https://github.com/gitlabhq/gitlabhq.git:
     - require:
       - pkg: gitlab-pkgs
       - user: git
+      - file: /home/git
       
 /home/git/gitlab/config/gitlab.yml:
   file.copy:

@@ -12,6 +12,7 @@ https://github.com/gitlabhq/gitlab-shell.git:
     - require:
       - pkg: gitlab-pkgs
       - user: git
+      - file: /home/git
 
 /home/git/gitlab-shell/config.yml:
   file.copy:
