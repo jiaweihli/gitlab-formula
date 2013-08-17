@@ -25,7 +25,6 @@ gitlab-pkgs:
   pkg.installed:
     - names:
       - sudo
-      - base-devel
       - zlib
       - libyaml
       - openssl
