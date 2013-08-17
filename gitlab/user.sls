@@ -1,8 +1,11 @@
 # user git required:
 /home/git:
   file.directory:
+    - user: git
     - mode: 755
     - makedirs: True
+    - require:
+      - user: git
 
 git:
   user.present:
