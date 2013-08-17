@@ -9,6 +9,7 @@ git:
 /home/git:
   file.directory:
     - user: git
+    - group: users
     - mode: 755
     - require:
       - user: git     
