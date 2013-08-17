@@ -1,18 +1,18 @@
 # user git required:
-git:
-  user.present:
-    - fullname: Gitlab
-    - home: /home/git
-    - createhome: True
-    
 /home/git:
   file.directory:
     - user: git
     - mode: 755
     - makedirs: True
-    - require:
-      - user: git
- 
+
+git:
+  user.present:
+    - fullname: Gitlab
+    - home: /home/git
+    - createhome: True
+    - require: 
+      - file: /home/git
+    
 
 git_config_name:
   cmd.run:
