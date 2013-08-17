@@ -2,6 +2,16 @@ gitlab
 ======
 
 Single Server gitlab Deployment with postgresql database
+running on localhost  
+
+To customize gitlab:
+Edit config and replace gitlab_url
+with something like 'http://domain.com/'
+$ sudo -u git -H vim /home/git/gitlab-shell/config.yml  
+
+Make sure to change "localhost" to the fully-qualified domain name of your
+host serving GitLab where necessary
+$ sudo -u git -H vim /home/git/gitlab/config/gitlab.yml    
 
 .. note::
 
@@ -25,9 +35,12 @@ Available states
     Installs prerequisite gems
 ``gitlab.postgres``
     Installs prerequisite postgresql database and service
+``gitlab.nginx``
+    Installs nginx webserver to serve gitlab    
 
 
 This formula depends on the following formulas:
 
 * `vim <https://github.com/saltstack-formulas/vim-formula>`_
 * `postgresql <https://github.com/saltstack-formulas/postgresql-formula>`_
+* `nginx <https://github.com/saltstack-formulas/nginx-formula>`_
