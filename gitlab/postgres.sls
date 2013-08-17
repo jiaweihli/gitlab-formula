@@ -4,11 +4,13 @@ include:
   - postgresql
   
 gitlab_database:
+  pkg:
+    - installed
+    - name: postgresql
   service:
     - running
     - enable: True
-    - names:
-      - postgresqld
+    - name: postgresqld
 
 /home/git/gitlab/config/database.yml:
   file.copy:

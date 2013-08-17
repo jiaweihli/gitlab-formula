@@ -10,7 +10,7 @@ https://github.com/gitlabhq/gitlabhq.git:
     - runas: git
     - unless: test -e /home/git/gitlab/config/gitlab.yml
     - require:
-      - pkg: pkgs
+      - pkg: gitlab-pkgs
       - user: git
       
 /home/git/gitlab/config/gitlab.yml:

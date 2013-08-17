@@ -1,7 +1,7 @@
 {% if grains['os'] == 'Debian' %}
-gitlab:
+gitlab-pkgs:
   pkg.installed:
-    - pkgs:
+    - names:
       - build-essential
       - zlib1g-dev 
       - libyaml-dev 
@@ -21,9 +21,9 @@ gitlab:
       - python2.7
       - ruby
 {% elif grains['os'] == 'Arch' %}
-gitlab:
+gitlab-pkgs:
   pkg.installed:
-    - pkgs:
+    - names:
       - sudo
       - base-devel
       - zlib
