@@ -97,3 +97,13 @@ https://github.com/gitlabhq/gitlabhq.git:
       - mode
     - require:
       - file: /home/git/gitlab/config/gitlab.yml
+
+/etc/init.d/gitlab:
+  file.copy:
+    - name: /etc/init.d/gitlab
+    - source: /home/git/gitlab/lib/support/init.d/gitlab
+    - user: root
+    - group: root
+    - mode: 0644
+    - require:
+      - git.latest: https://github.com/gitlabhq/gitlabhq.git

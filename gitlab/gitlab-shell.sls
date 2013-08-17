@@ -24,3 +24,5 @@ gitlab-shell-install:
     - name: /home/git/gitlab-shell/bin/install
     - cwd: /home/git/gitlab-shell/bin/
     - runas: git
+    - require:
+      - file: /home/git/gitlab-shell/config.yml 
