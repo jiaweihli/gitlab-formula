@@ -4,11 +4,11 @@ git:
     - fullname: Gitlab
     - home: /home/git
     - createhome: True
-    - require: 
-      - file: /home/git
+
 
 /home/git:
   file.directory:
+    - user: git
     - mode: 755
     - require:
       - user: git     
