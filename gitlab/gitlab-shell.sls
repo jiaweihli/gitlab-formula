@@ -1,6 +1,7 @@
 # download gitlab-shell and install
 include:
   - gitlab.user
+  - gitlab.packages
 
 https://github.com/gitlabhq/gitlab-shell.git:
   git.latest:
