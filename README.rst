@@ -1,7 +1,7 @@
 gitlab
 ======
 
-Single Server gitlab Deployment
+Single Server gitlab Deployment with postgresql database
 
 .. note::
 
@@ -23,8 +23,11 @@ Available states
     Installs gitlab from github
 ``gitlab.gems``
     Installs prerequisite gems
+``gitlab.postgres``
+    Installs prerequisite postgresql database and service
 
 
 This formula depends on the following formulas:
 
 * `vim <https://github.com/saltstack-formulas/vim-formula>`_
+* `postgresql <https://github.com/saltstack-formulas/postgresql-formula>`_
