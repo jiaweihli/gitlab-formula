@@ -11,7 +11,11 @@ $ sudo -u git -H vim /home/git/gitlab-shell/config.yml
 
 Make sure to change "localhost" to the fully-qualified domain name of your
 host serving GitLab where necessary
-$ sudo -u git -H vim /home/git/gitlab/config/gitlab.yml    
+$ sudo -u git -H vim /home/git/gitlab/config/gitlab.yml      
+
+And change "server" to the fully-qualified domain name of your
+host serving GitLab where necessary
+$ sudo vim /etc/nginx/sites-available/gitlab      
 
 .. note::
 
