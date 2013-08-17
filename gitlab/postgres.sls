@@ -11,16 +11,24 @@ gitlab_database:
     - running
     - enable: True
     - name: postgresql
+  postgres_user:
+    - name: git
+    - password: gitlab
+  postgres_database:
+    - name: gitlabhq_production
+    - template: template1
+    - owner: git
 
 /home/git/gitlab/config/database.yml:
-  file.copy:
+  file.managed:
     - name: /home/git/gitlab/config/database.yml
-    - source: /home/git/gitlab/config/database.yml.postgresql
+    - source: salt://gitlab/database.yml
     - user: git
     - group: git
     - mode: 744
     - require:
       - git.latest: https://github.com/gitlabhq/gitlabhq.git
+
       
 install_gitlab_postgresql:
   cmd.run:

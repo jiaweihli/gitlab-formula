@@ -1,9 +1,11 @@
 include:
   - vim
   - postgresql
+  - nginx
   - gitlab.packages
   - gitlab.user
   - gitlab.gitlab-shell
   - gitlab.gitlab
   - gitlab.gems
   - gitlab.postgres
+  - gitlab.nginx
