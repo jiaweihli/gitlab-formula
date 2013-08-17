@@ -17,6 +17,7 @@ git_config_name:
   cmd.run:
     - name: 'git config --global user.name "Gitlab"'
     - cwd: /home/git/
+    - user: git
     - runas: git
     - require:
       - user: git
@@ -26,6 +27,7 @@ git_config_email:
   cmd.run:
     - name: 'git config --global user.email "gitlab@localhost"'
     - cwd: /home/git/
+    - user: git
     - runas: git
     - require:
       - user: git
