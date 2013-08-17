@@ -23,5 +23,5 @@ create_gitlab_database:
     - cwd: /home/git
     - runas: git
     - require:
-      cmd: 
+      - cmd: 
         - install_gitlab_postgresql           
