@@ -4,14 +4,14 @@ gitlab
 Single Server gitlab Deployment with postgresql database
 running on localhost  
 
-To customize gitlab:
+To customize gitlab:  
 Edit config and replace gitlab_url
 with something like 'http://domain.com/'
-$ sudo -u git -H vim /home/git/gitlab-shell/config.yml  
+  $ sudo -u git -H vim /home/git/gitlab-shell/config.yml  
 
 Make sure to change "localhost" to the fully-qualified domain name of your
 host serving GitLab where necessary
-$ sudo -u git -H vim /home/git/gitlab/config/gitlab.yml      
+  $ sudo -u git -H vim /home/git/gitlab/config/gitlab.yml      
 
 And change "server" to the fully-qualified domain name of your
 host serving GitLab where necessary
