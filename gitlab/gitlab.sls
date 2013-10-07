@@ -5,7 +5,7 @@ include:
 
 https://github.com/gitlabhq/gitlabhq.git:
   git.latest:
-    - rev: 5-4-stable
+    - rev: 6-1-stable
     - target: /home/git
     - runas: git
     - unless: test -e /home/git/gitlab/config/gitlab.yml
@@ -25,6 +25,13 @@ https://github.com/gitlabhq/gitlabhq.git:
   file.copy:
     - name: /home/git/gitlab/config/puma.rb
     - source: /home/git/gitlab/config/puma.rb.example
+    - require:
+      - git.latest: https://github.com/gitlabhq/gitlabhq.git
+
+/home/git/gitlab/config/initializers/rack_attack.rb
+  file.copy:
+    - name: /home/git/gitlab/config/initializers/rack_attack.rb
+    - source: /home/git/gitlab/config/initializers/rack_attack.rb.example
     - require:
       - git.latest: https://github.com/gitlabhq/gitlabhq.git
 

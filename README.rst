@@ -15,7 +15,10 @@ host serving GitLab where necessary
 
 And change "server" to the fully-qualified domain name of your
 host serving GitLab where necessary
-$ sudo vim /etc/nginx/sites-available/gitlab      
+  $ sudo vim /etc/nginx/sites-available/gitlab      
+
+Enable rack_attack by uncommenting the line 'config.middleware.use Rack::Attack'
+  $ sudo -u git -H vim /home/git/gitlab/config/application.rb
 
 .. note::
 
