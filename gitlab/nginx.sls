@@ -6,12 +6,6 @@ nginx-server:
   pkg:
     - installed
     - name: nginx
-  service:
-    - running
-    - enable: True
-    - name: nginx
-    - require:
-      - file: /etc/nginx/sites-enabled/gitlab 
 
 /etc/nginx/sites-available/gitlab:
   file.copy:
@@ -29,3 +23,11 @@ nginx-server:
     - target: /etc/nginx/sites-available/gitlab
     - require: 
       -file: /etc/nginx/sites-available/gitlab 
+
+nginx-server-2:
+  service:
+    - running
+    - enable: True
+    - name: nginx
+    - require:
+      - file: /etc/nginx/sites-enabled/gitlab 
