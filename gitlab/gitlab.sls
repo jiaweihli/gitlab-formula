@@ -28,7 +28,7 @@ https://github.com/gitlabhq/gitlabhq.git:
     - require:
       - git.latest: https://github.com/gitlabhq/gitlabhq.git
 
-/home/git/gitlab/config/initializers/rack_attack.rb
+/home/git/gitlab/config/initializers/rack_attack.rb:
   file.copy:
     - name: /home/git/gitlab/config/initializers/rack_attack.rb
     - source: /home/git/gitlab/config/initializers/rack_attack.rb.example
