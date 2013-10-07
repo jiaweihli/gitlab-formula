@@ -19,7 +19,7 @@ nginx-server:
     - source: /home/git/gitlab/lib/support/nginx/gitlab
     - require:
       - git.latest: https://github.com/gitlabhq/gitlabhq.git
-  file.sed
+  file.sed:
     - before: 'server_name YOUR_SERVER_FQDN'
     - after: "server_name {{ fqdn }}"
     - limit: ';'
